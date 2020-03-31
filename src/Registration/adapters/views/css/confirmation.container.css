@@ -1,0 +1,125 @@
+.container-confirm100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #adadad;
+}
+
+.wrap-confirm100 {
+    width: 390px;
+    background: #324178;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.image-header {
+    display: block;
+    margin: auto;
+}
+
+.confirm100-form {
+    width: 100%
+}
+
+.confirm100-form-title {
+    display: block;
+    font-size: 18px;
+    color: #FFF;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.confirm100-form-subtitle {
+    font-size: 12px;
+}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 37px
+}
+
+.input100 {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: #FFF;
+    padding: 0 5px
+}
+
+.btn-show-pass {
+    font-size: 15px;
+    color: #999;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    cursor: pointer;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s
+}
+
+.container-confirm100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px
+}
+
+.wrap-confirm100-form-btn {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+.confirm100-form-btn {
+    background-color: #ffcb00;
+    font-size: 15px;
+    color: #282c34;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px
+}
