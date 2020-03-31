@@ -4,12 +4,13 @@ import { RegistrationState } from "../../../redux.config/AppState";
 const initialState: RegistrationState = {
     isLoading: false,
     error    : undefined,
-    success  : null
+    success  : null,
+    phoneNumber: null
 }
 export const registrationReducer = (state = initialState, action: any): RegistrationState => {
     switch (action.type) {
         case REGISTER:
-            return { isLoading: true, error: undefined, success: null }
+            return { isLoading: true, error: undefined, success: null, phoneNumber: action.payload }
         case REGISTRATION_FAILED:
             return { ...state, isLoading: false, error: action.payload, success: false }
         case REGISTRATION_SUCCEEDED:

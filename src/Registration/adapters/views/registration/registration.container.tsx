@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
-import './css/register.container.css'
+import '../css/register.container.css'
+import { RouteComponentProps } from 'react-router'
 
-interface Props {
+interface Props extends RouteComponentProps {
     register: (phoneNumber: string) => void
     isLoading: boolean
     error: string | undefined
@@ -19,6 +20,11 @@ export class RegistrationContainer extends PureComponent<Props, State> {
         this.state = {
             phoneNumber: '+33'
         }
+    }
+
+    componentDidUpdate(){
+        if(this.props.success)
+            this.props.history.push('/confirmation')
     }
 
     render() {

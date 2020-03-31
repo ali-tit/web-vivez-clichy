@@ -14,7 +14,7 @@ export class PrivateArea extends Route<Props> {
             redirectPath = '/register';
         }
 
-        if (redirectPath) {
+        if (redirectPath !== '') {
             const renderComponent = () => (<Redirect to={{ pathname: redirectPath }}/>);
             return <Route {...this.props} component={renderComponent} render={undefined}/>;
         } else {

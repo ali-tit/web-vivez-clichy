@@ -4,10 +4,11 @@ import './Common/assets/App.css';
 import { reduxStore } from "./redux.config/store.redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PrivateArea } from "./navigation/privateArea";
-import { RouteComponentProps } from "react-router";
+import { RouteComponentProps, Redirect } from "react-router";
 import { ProfileContainer } from "./Profile/adapters/views/profile.container";
 import { PageNotFoundError } from "./Common/adapters/views/pageNotFound.error";
-import { Registration } from "./Registration/adapters/views";
+import { Registration } from "./Registration/adapters/views/registration";
+import { Confirmation } from './Registration/adapters/views/confirmation';
 
 const store = reduxStore()
 
@@ -28,7 +29,7 @@ class App extends PureComponent<any, State> {
     }
 
     componentDidMount() {
-        //here goes the check if there is an authenticated user
+
     }
 
     render() {
@@ -36,10 +37,12 @@ class App extends PureComponent<any, State> {
             <Provider store={store}>
                 <Router>
                     <Switch>
+                        <Route path="/confirmation" component={Confirmation}/>
                         <Route path="/register" component={Registration}/>
                         <PrivateArea component={ProfileContainer}
                                      path="/profile"
                                      isAuthenticated={this.state.hasSession}/>
+                        <Redirect to={"/profile"}/>
                         <Route component={PageNotFoundError}/>
                     </Switch>
                 </Router>
